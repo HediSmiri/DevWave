@@ -78,6 +78,11 @@ span {
   color: var(--text-gray);
 }
 
+.back{
+  height: 300px;
+  width:auto
+}
+
 p {
   font-family: var(--Lexend);
   color: var(--text-light);
@@ -88,7 +93,11 @@ p {
 /* --------------- navbar ----------------- */
 
 .nav {
-  background: white;
+  position: fixed;
+  z-index: 2;
+  width:99%;
+  opacity: 0.7;
+  background-color: #0A2723;
   padding: 0 2rem;
   height: 0rem;
   min-height: 10vh;
@@ -96,6 +105,15 @@ p {
   transition: height 1s ease-in-out;
 }
 
+.nav img {
+  width: 200px;
+  opacity: 1;
+}
+
+.nav a {
+  color:white;
+  opacity: 1;
+}
 .nav .nav-menu {
   justify-content: space-between;
 }
@@ -116,6 +134,8 @@ p {
 
 .nav .toggle-collapse .toggle-icons i {
   font-size: 1.4rem;
+  position: absolute;
+  left: 300px;
   color: var(--text-gray);
 }
 
@@ -126,12 +146,15 @@ p {
 .nav .nav-items {
   display: flex;
   margin: 0;
+  position: relative;
+  left: 44%;
+  
 }
 
 .nav .nav-items .nav-link {
   padding: 1.6rem 1rem;
   font-size: 1.1rem;
-  position: relative;
+  /* position: relative; */
   font-family: var(--Abel);
   font-size: 1.1rem;
 }
@@ -153,7 +176,11 @@ p {
 }
 
 .nav .social {
-  padding: 1.4rem 0;
+  padding: 28px;
+  /* position: absolute; */
+  margin-right: 54px;
+  left: -28vh;
+
 }
 
 .nav .social i {
@@ -172,12 +199,14 @@ p {
 main .site-title {
   background: url("../images/portfolio8.jpg");
   background-size: cover;
-  height: 110vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
 
 main .site-title .site-background {
+  
+  margin-top: 10vh;
   padding-top: 10rem;
   text-align: center;
   color: var(--white);
@@ -260,6 +289,16 @@ section .container .owl-nav {
 
 .owl-theme .owl-nav [class*="owl-"] {
   outline: none;
+}
+
+main .site-background h3{
+  font-size: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:rgba(255, 255, 255, 0.842)
+}
+
+main .site-background h3{
+  font-size: 80px;
 }
 
 /* -------x------- Blog Carousel -----x------ */
@@ -501,6 +540,12 @@ footer.footer .move-up span:hover {
 /*              Viewport less then or equal to 1130px            */
 
 @media only screen and (max-width: 1130px) {
+  .nav .nav-items{
+    display: flex;
+    margin: 0;
+    position: relative;
+    left: 13%;
+  }
   .site-content .post-content > .post-image .post-info {
     left: 2rem !important;
     bottom: 1.2rem !important;
@@ -521,6 +566,9 @@ footer.footer .move-up span:hover {
 /*              Viewport less then or equal to 750px            */
 
 @media only screen and (max-width: 750px) {
+  .nav .nav-items{
+
+  }
   .nav .nav-menu,
   .nav .nav-items {
     flex-direction: column;
@@ -567,3 +615,14 @@ footer.footer .move-up span:hover {
 }
 
 /*        x      Viewport less then or equal to 520px       x     */
+
+@media only screen and (min-width: 1600px){
+
+  .nav .nav-items {
+    display: flex;
+    margin: 0;
+    position: relative;
+    left: 70%;
+    
+  }
+}
